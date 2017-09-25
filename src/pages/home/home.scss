@@ -1,0 +1,59 @@
+page-home {
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 0px;
+    }
+    .time {
+        flex: 2;
+        background-color: #eee;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .time-text{
+        display: block;
+        font-size: 50px;
+    }
+    .steps {
+        flex: 1.5;
+        padding: 5px;
+    }
+    .steps-col {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #eee;
+        height: 100%;
+    }
+    .steps-text {
+        display: block;
+        font-size: 40px;
+    }
+    .map {
+        flex: 3;
+        padding: 0px;
+    }
+    #map {
+        height: 100%;
+        width: 100%;
+    }
+    .start-btn {
+        flex: 1;
+    }
+    .start-btn-col{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 100%;
+    }
+    .text-center{
+        text-align: center;
+    }
+    .zero-padding{
+        padding: 0px;
+    }
+}

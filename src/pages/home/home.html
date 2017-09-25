@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Pedometer
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid class="wrapper">
+
+    <ion-row class="time">
+      <ion-col col-12 class="text-center">
+        TIME
+        <span class="time-text" *ngIf="!timeElapsed">00:00:00</span>
+        <span class="time-text">{{timeElapsed | date:'HH:mm:ss'}}</span>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="steps">
+      <ion-col col-5 class="steps-col">
+        STEPS
+        <span class="steps-text">{{stepsCount}}</span>
+      </ion-col>
+      <ion-col col-2></ion-col>
+      <ion-col col-5 class="steps-col">
+        CALORIES BURNT
+        <span class="steps-text">{{caloriesBurnt}}</span>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="map">
+      <ion-col col-12 class="zero-padding">
+          <sebm-google-map id="map" [latitude]="map.lat" [longitude]="map.lng" [zoom]="map.zoom" >
+              <sebm-google-map-marker [latitude]="map.lat" [longitude]="map.lng">
+                  <sebm-google-map-info-window>
+                      <strong>My location</strong>
+                  </sebm-google-map-info-window>
+              </sebm-google-map-marker>
+          </sebm-google-map>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="start-btn">
+      <ion-col col-12 class="zero-padding start-btn-col">
+          <button (click)="toggleCountSteps()" ion-button full large>{{btnText}}</button>
+      </ion-col>
+    </ion-row> 
+
+  </ion-grid>
+</ion-content>
